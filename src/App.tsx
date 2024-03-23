@@ -16,6 +16,10 @@ function App() {
           addresses: {JSON.stringify(account.addresses)}
           <br />
           chainId: {account.chainId}
+          <br />
+          {account?.connector?.icon && (
+            <img src={account.connector.icon} height={60} width={60} />
+          )}
         </div>
 
         {account.status === "connected" && (
